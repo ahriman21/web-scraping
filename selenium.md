@@ -31,21 +31,19 @@ driver.execute_script('arguments[0].click();', submit_btn)
 
 
 #### 5. wait until the element get ready on the page :
+> explicit wait :
 ```
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-try:
-    element = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located(By.LINK_TEXT, 'text')
-    )
-    element.click()
-finally:
-    driver.quit()
+WebِDriverWait(driver, 10).until(
+    EC.text_to_be_present_in_element(
+        (By.ID, 'X'),
+        'some text' # The text we expect to apear.
+)
 ```
-
-#### note => implicity wait :
-> this command will effect all "find element" methods across your script !!!
+> implicity wait :
 ```
+# this command will effect all "find element" methods across your script !!!
 seconds = 4
 driver.implicity_wait(seconds)
 ```
