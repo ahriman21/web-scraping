@@ -44,6 +44,7 @@ finally:
 ```
 
 #### note => implicity wait :
+> this command will effect all "find element" methods across your script !!!
 ```
 seconds = 4
 driver.implicity_wait(seconds)
