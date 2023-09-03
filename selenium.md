@@ -71,6 +71,14 @@ for i in range(100):
     actions.perform()
 ```
 
+#### 9. Keys => accessing to keyboard keys in selenium
+```
+from selenium.webdriver.common.keys import Kyes
+
+# pass 'enter' key to the input:
+input = driver.find_element('name', 'search')
+input.send_keys(Kyes.ENTER)
+```
 
 
 #### END. quit browser :
