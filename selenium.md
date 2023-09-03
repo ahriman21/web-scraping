@@ -80,6 +80,14 @@ input = driver.find_element('name', 'search')
 input.send_keys(Kyes.ENTER)
 ```
 
+#### 10. ChromeOptions.headless => make chrome simulator invisible when script starts
+```
+from selenium import webdriver
+options = webdriver.ChromeOptions()
+options.headless = True
+driver = webdriver.Chrome(options=options)
+```
+
 
 #### END. quit browser :
 ```
