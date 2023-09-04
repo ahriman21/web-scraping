@@ -88,6 +88,11 @@ options.headless = True
 driver = webdriver.Chrome(options=options)
 ```
 
+#### 11. get_screenshot_as_file => you can get screenshot from a webpage
+```
+driver.get_screenshot_as_file('path/name.extention')
+```
+
 
 #### END. quit browser :
 ```
