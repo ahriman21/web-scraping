@@ -97,7 +97,7 @@ driver.get_screenshot_as_file('path/name.extention')
 #### 12. download files using Chrome webdriver
 ```
 chrome_options.add_experimental_option("prefs", {
-    "download.default_directory": "/path/to/save/directory",
+    "download.default_directory": r'C:\Users\Pouria\Desktop\\,
     "download.prompt_for_download": False,  # Disable the "Save As" dialog
     "download.directory_upgrade": True,
     "safebrowsing.enabled": False,  # Disable safe browsing
