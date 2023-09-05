@@ -96,13 +96,12 @@ driver.get_screenshot_as_file('path/name.extention')
 
 #### 12. download files using Chrome webdriver
 ```
-options = webdriver.ChromeOptions() ;
-
-prefs = {"download.default_directory" : "C:\Tutorial\down"};
-
-options.add_experimental_option("prefs",prefs);
-
-driver = webdriver.Chrome(chrome_options=options);
+chrome_options.add_experimental_option("prefs", {
+    "download.default_directory": "/path/to/save/directory",
+    "download.prompt_for_download": False,  # Disable the "Save As" dialog
+    "download.directory_upgrade": True,
+    "safebrowsing.enabled": False,  # Disable safe browsing
+})
 ```
 
 
