@@ -94,6 +94,18 @@ driver.get_screenshot_as_file('path/name.extention')
 ```
 
 
+#### 12. download files using Chrome webdriver
+```
+options = webdriver.ChromeOptions() ;
+
+prefs = {"download.default_directory" : "C:\Tutorial\down"};
+
+options.add_experimental_option("prefs",prefs);
+
+driver = webdriver.Chrome(chrome_options=options);
+```
+
+
 #### END. quit browser :
 ```
 import time
